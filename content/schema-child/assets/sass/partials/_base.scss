@@ -1,0 +1,78 @@
+
+// Colors
+// ======
+// -- By color.
+
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-grey-dark: #707171;
+$color-red-dark: #744347;
+$color-grey-light: #f1f1f1;
+$color-grey-very-light: #979898;
+// -- By usage.
+
+$color-site-bg: #FFFFFF;
+
+//menu
+$menu-border: #999a9a;
+$menu-color: #979898;
+$menu-color-bg-link-hover: #AEB0AD;
+
+
+//slider
+$slider-text: #f1f1f1;
+
+//form border
+$form-border: #878787;
+$form-required: red;
+
+
+// Typography and vertical rhythm.
+// ===============================
+
+$font-light: 'hurme_geometric_sans_1light';
+$font-regular: 'hurme_geometric_sans_1regular';
+$font-hairline: 'hurme_geometric_sans_hairline';
+
+$font-general: $font-light;
+$font-heading: $font-regular;
+
+
+// Set the vertical unit to a value that is smaller than
+// your target $line-height-base value (below) and can
+// be multiplied by a value such as 1.125 or 1.25 so they
+// can relateively quickly sync back up w/the line height.
+//
+// In short, fractional values of $vertical-unit should be
+// increments of .125 (i.e., 1/8 of a vertical unit) .
+$vertical-unit: 16px;
+
+// Use this as your base font-size and multiply/divide it as
+// needed to achieve relative sizing. Any value is fine as
+// a divider/multiplier, since vertical rhythm isn't affected.
+$font-size-base: 62.5%;
+$font-size-px-base: 16px;
+
+// Use're using same unit of measure (rem) for font size
+// and line-height (not a line-height that's relative to
+// font-size) so vertical rhythm is possible.
+$line-height-base: $vertical-unit * 1.5;
+
+// Dimensions
+// ==========
+
+// Somewhat arbitrary horizontal unit. Not used in Susy
+// configuration, but will be more consistent than using ems.
+$horizontal-unit: 16px;
+
+// Breakpoints.
+$breakpoint-desktop: 1240px;
+$breakpoint-laptop: 959px;
+$breakpoint-tablet: 767px;
+$breakpoint-phone: 560px;
+
+// Structure Values
+$site-width: 1000px;
+
+// Structure Values
+$breakpoint-menu: 599px;

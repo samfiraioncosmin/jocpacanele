@@ -1,0 +1,140 @@
+/*Semantic Elements*/
+
+html {
+	font-size: $font-size-base;
+	background-color: $color-site-bg;
+}
+body {
+	font-size: $font-size-px-base;
+	background-color: $color-site-bg;
+	font-family: $font-general;
+	color: $color-grey-dark;
+	&.custom-font-enabled {
+		font-family: $font-general;
+	}
+	.site {
+		max-width: $site-width;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin: 0 auto;
+		box-shadow: none;
+	}
+	a {
+		@include link-colors($color-grey-dark, $color-red-dark);
+	}
+}
+
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+img, 
+object, 
+embed, 
+iframe {
+    max-width: 100%;
+}
+
+/*General Semantic Elements*/
+.entry-content {
+	h1 {}
+	h2 {
+		@include font-size(2.5);
+		@include line-height(3);
+		&.big {
+			@include font-size(3);
+			@include line-height(3);
+		}
+	}
+	h3 {
+		@include font-size(2);
+		@include line-height(2.4);
+		&.small {
+			@include font-size(1.7);
+			@include line-height(1);
+		}
+	}
+	h5 {
+		@include font-size(1.5);
+		@include line-height(1.8);
+		&.no-margin {
+			margin: 0;
+		}
+		&.no-margin-top {
+			margin-top: 0;
+		}
+	}
+	p {
+		@include font-size(1.5);
+		@include line-height(1.8);
+		&.small {
+			@include font-size(1.3);
+			@include line-height(1.6);
+		}
+	}
+	img {
+		box-shadow: none;
+		border-radius: 0;
+	}
+}
+
+a.more,
+a.more:hover {
+	@include font-size(1.8);
+	@include line-height(2.2);
+	color: $color-grey-light !important;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: $color-red-dark;
+	border-radius: 0 0 5px 5px;
+	padding-bottom: 3px;
+	text-decoration: none;
+	margin-bottom: -25px !important;
+}
+
+a.requestQuote,
+a.requestQuote:hover {
+	color: $color-red-dark !important;
+	text-transform: uppercase;
+	@include font-size(1.5);
+	border: 1px solid $color-red-dark;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.shadow-img {
+	-webkit-box-shadow: 0px 33px 43px -37px rgba(0,0,0,0.67);
+	-moz-box-shadow: 0px 33px 43px -37px rgba(0,0,0,0.67);
+	box-shadow: 0px 33px 43px -37px rgba(0,0,0,0.67);
+}
+
+.relative {
+	position: relative;
+}
+.flex {
+	display: flex;
+}
+.absolute-bottom-right {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+.absolute-top-right {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+.absolute-top-left {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.text-color-red {
+	color: $color-red-dark;
+}

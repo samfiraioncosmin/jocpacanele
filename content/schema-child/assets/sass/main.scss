@@ -1,0 +1,19 @@
+// Primary theme SCSS file for Marriage Boot Camp.
+
+// Include partials with no output first.
+
+@import "partials/base";
+@import "mixins/general";
+
+// Now the rest of the style partials, from generic to specific.
+
+@import "lib/normalize";      // normalize (to remain unmodified)
+@import "partials/structure";             // structure
+@import "partials/semantic";           // custom semantic markup styles
+@import "partials/wp-utilities";       // wp utility classes
+@import "partials/homepage";               // main homepage style partial
+@import "partials/main";               // main homepage style partial
+@import "partials/header";             // header, main navs
+@import "partials/footer";             // footer, footer widgets
+
+//@import "lib/select2min"
