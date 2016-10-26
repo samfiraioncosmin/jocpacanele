@@ -1,0 +1,142 @@
+/*HEADER*/
+
+.site-header {
+	padding: 0;
+	position: relative;
+	padding-top: 25px;
+}
+
+/*Social Area*/
+
+.site-header .social-area {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	a,
+	a:hover {
+		color: $color-white;
+		background-color: $color-grey-dark;
+		text-decoration: none;
+		padding: 5px;
+		border-radius: 0 0 25px 25px;
+		min-width: 50px;
+		text-align: center;
+		margin-left: 10px;
+		display: inline-block;
+		float: left;
+		i {
+			@include font-size(2);
+		}
+		&:nth-child(2) {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		&:nth-child(3) {
+			@include font-size(1.7);
+			padding-top: 5px;
+			font-family: $font-regular;
+			max-width: 80px;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+/*Header Contact*/
+
+.header-contact {
+	text-align: right;
+	position: absolute;
+	right: 0px;
+	top: 75px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	border-right: 1px solid $color-red-dark;
+	@include line-height(2);
+	a,
+	a:hover {
+		color: $menu-color;
+		text-decoration: none;
+	}
+	span {
+		color: $color-red-dark;
+	}
+	@include bp(phone) {
+		left: 0px;
+		right: auto;
+		text-align: left;
+		top: 30px;
+		border-right: 0 solid $color-red-dark;
+		border-left: 1px solid $color-red-dark;
+		padding-left: 5px;
+	}
+}
+
+/*Logo*/
+
+.header-logo {
+	text-align: center;
+	@include bp(tablet) {
+		text-align: left;
+	}
+	@include bp(phone) {
+		margin-top: 65px;
+		text-align: center;
+	}
+	img {
+		box-shadow: none;
+		margin: 0px;
+	}
+}
+
+/*Menu*/
+.main-navigation {
+	margin-top: 30px;
+	margin-bottom: 40px;
+	ul.nav-menu,
+	div.nav-menu > ul {
+		border-color: $menu-border;
+		text-align: center;
+		width: auto;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		a {
+			font-weight: normal;
+			text-transform: none;
+			@include font-size(2.3);
+			@include line-height(2.5);
+			color: $menu-color;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-bottom: 3px;
+			&:hover {
+				color: $color-red-dark;
+				background-color: $menu-color-bg-link-hover;
+			}
+			@include bp(menu) {
+				text-decoration: none;
+			}
+		}
+		li {
+			margin: 0;
+			border-right: 1px solid $color-red-dark;
+			padding-right: 5px;
+			@include bp(menu) {
+				border-width: 0;
+				padding-right: 0;
+			}
+			&.current_page_item a {
+				color: $color-red-dark;
+			}
+		}
+		li:last-child {
+			border-width: 0;
+			padding-right: 0;
+		}
+	}
+	.menu-toggle {
+		@include font-size(2);
+	}
+}

@@ -1,0 +1,112 @@
+// Mixins provided by underscores theme.
+
+// Media Query Helpers
+@mixin breakpoint($breakpoint, $direction: min) {
+	@media (#{$direction}-width: $breakpoint)  {
+		@content;
+	}
+}
+
+@mixin breakpoint-tweener( $bp-start, $bp-stop ) {
+	@media screen and (min-width: $bp-start) and (max-width: $bp-stop) {
+		@content;
+	}
+}
+
+@mixin bp($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (max-width: $breakpoint-desktop) { @content; }
+  }
+  @else if $breakpoint == laptop {
+    @media (max-width: $breakpoint-laptop) { @content; }
+  }
+  @else if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet)  { @content; }
+  }
+  @else if $breakpoint == menu {
+    @media (max-width: $breakpoint-menu)  { @content; }
+  }
+  @else if $breakpoint == phone {
+    @media (max-width: $breakpoint-phone)  { @content; }
+  }
+  @else if $breakpoint == site-width {
+    @media (max-width: $site-width)  { @content; }
+  }
+}
+/*Usage
+@include bp(desktop) {
+	value: value;
+}
+*/
+
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1.6) {
+	font-size: ($sizeValue * 10) + px;
+	font-size: $sizeValue + rem;
+}
+
+@mixin line-height($sizeValue: 1.6) {
+	line-height: ($sizeValue * 10) + px;
+	line-height: $sizeValue + rem;
+}
+
+@mixin link-colors($link, $hover) {
+	&,
+	&:link,
+	&:visited {
+		color: $link;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $hover;
+	}
+}
+
+@mixin flex {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin linearLeftRight(){
+	background: rgba(0,0,0,1);/* Old Browsers */
+	background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(255,255,255,0)));/* Chrome, Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* IE 10+ */
+	background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=1 );/* IE6-9 */
+}
+
