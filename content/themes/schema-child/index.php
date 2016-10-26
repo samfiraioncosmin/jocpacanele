@@ -1,3 +1,0 @@
-<?php
-/* Silance is gold
- 
