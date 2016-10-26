@@ -1,0 +1,12 @@
+/shared
+/local-config.php
+/sql-dump-*.sql
+/db-sync
+/content/upgrade/
+.DS_Store
+/wp
+/index.php
+/wp-config.php
+/.htaccess
+/wp-cli.yml
+/*Project specific*/
